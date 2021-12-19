@@ -1,0 +1,35 @@
+Time Complexity
+
+    -> Time complexity is not the time taken to run some algorithm on some machine.
+    -> Consider we have 2 machines, 1 is fast and 1 is slow. Both are given some algorithm to run. Faster one runs it in 5 secs and slower one does in 10 seconds for a certain amount of data.
+        -> Now, in this case which device has a better time complexity?
+        -> Neither one, because time complexity is not a concept of the hardware.
+        -> Time complexity is basically a relationship between time taken to run an algorithm vs the amount of input provided.
+
+    -> So, how do we understand time complexity?
+        -> If we start understanding how does the time taken vary, based on the amount of input, we can propose a relationship between the two items.
+        -> Example: If I pick linear search, I want to find something in a dataset, and consider it does not exist in the dataset.
+        -> So, how would the graph look? Check image time_complexity_analysis in this folder.
+        -> Point being, no matter which machine we run the algorithm in, the time may reduce, but the relationship between time taken vs the size of datas remains the same.
+        -> In case of linear search, it was forming a straight line, which we can represent in the form of a linear equation (y = mx + c)
+
+    -> So, what is the need to understand time complexity and what do we acheive by doing so?
+        -> When there are two ways to acheive one destination, sometimes there needs to be a measure of which way is better.
+        -> So, understanding time complexity of the two algorithms is one way to understand which algorithm would do better when the input increases.
+
+    -> So, for example, to perform a search in a sorted array, there are two way basic ways: Linear Search and Binary Search.
+        -> Based on algorithm, real time data, we know binary search takes lesser time. But can we explain this mathematically?
+        -> Look at diagram, "linear vs binary search.jpg" file
+            -> Based on this, we understand that as the size of input increases, the time taken by Binary Search algorithm takes lesser time
+        
+    -> So, far, we know O(1) < O(logN) < O(N)
+        -> Constant Time complexity is better than logarithmic which is better than linear time complexity.
+
+
+Space Complexity
+
+    -> This is basically how much extra space is being utilized apart from the input.
+    -> We do not consider single variables like int x, int i ... etc.
+        -> We only care about large data structures like arrays etc whose size will increase with time.
+
+** Time Complexities of all the sorting algorithms are discussed in the sorting directory itself. If not done yet, it will be done when doing those sorting algorithms
