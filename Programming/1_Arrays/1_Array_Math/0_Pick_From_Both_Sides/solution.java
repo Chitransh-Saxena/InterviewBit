@@ -27,7 +27,7 @@ class solution {
         	max_ans = sum;
 
         	int j = A.size() - 1;
-        	while(B>0) {
+        	while(B>0 && i>0) {
             		sum += A.get(j--);
             		sum -= A.get(--i);
             		max_ans = Math.max(max_ans, sum);
@@ -47,7 +47,6 @@ class solution {
 	
 		ArrayList<Integer> list = new ArrayList<Integer>(Arrays.asList(1,2,-1,5,8,0,-3,11));
 		Integer B = 5;
-
 
 		System.out.println(solve(list, B));
 	}
