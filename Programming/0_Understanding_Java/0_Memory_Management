@@ -35,4 +35,8 @@
 -> So, if we do if (arr == b), then we are not comapring the values, we are comparing two memory addresses.
     -> This logic goes for all the classes.
     -> By similar logic, it is not advisable to compare String variables too.
-        -> This is why, we have equals() method for String. (String s1 = "hello" and String s2 = "hello", and if we compare if(s1 == s2), we are idiots.)
+        -> This is why, we have equals() method for String. (String s1 = "hello" and String s2 = "hello_changed", and if we compare if(s1 == s2), we are idiots.)
+    -> Comparing two same strings in java will yield "true" result, because Java does optimization and stores same strings in same address.
+
+    -> So, if String s1 = "hello" and String s2 = "hello" ... so both s1 and s2 will be pointing to same memory location in heap (String pool)
+    -> But, if we change s2 = "hi", so now, it is a different String literal and is going to be stored in a different memory location.
