@@ -1,0 +1,13 @@
+* Static and Heap memory
+    -> Stack memory contains the 'reference variables' and 'primitive data types'
+    -> Heap memory contains the actual data or the 'objects'
+* Garbage Collection
+    * When there is no reference variable pointing to some 'object', that object becomes eligible for gargage collection.
+
+* Intro
+-> a = 10;
+    -> Here, a is 'reference variable' here
+    -> and 10 is the object.
+    -> a is not the object.
+
+-> So, 'a' is stored in stack, and that a is storing the memory address of a block in 'heap' where the value 10 is stored.
