@@ -1,0 +1,15 @@
+Difference between Collections and Arrays
+
+* Arrays are fixed in size, collections are growable
+* If memory size is not clear, collections should be used
+* Arrays are better for performance because, collections internally do a 'copy' operation when a new element out of the size bound is inserted.
+* Array can only hold only homogenous data, Collections can hold both.
+* Arrays do not have underlying data structure support (like methods), collections have
+* Arrays can hold both primitive data types and objects, Collections can only hold objects.
+
+
+Collection Framework
+
+* It is a group of classes and interfaces which can be used to represent a group of objects as a single entity.
+* Collection is different. This is used to represent a single type of collection. Like container in C++.
+* So, in terms of analogy, STL = Collection framewrok and Container = Collection.
