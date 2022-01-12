@@ -3,11 +3,36 @@
     -> Heap memory contains the actual data or the 'objects'
 * Garbage Collection
     * When there is no reference variable pointing to some 'object', that object becomes eligible for gargage collection.
+* Reference types
+    * This is basically a type of variable which contains the reference to some value
+    * Example: String s = "Hello".
+    * Here, There is a variable named 's' created in stack. This stack memory variable, contains the address to the literal "Hello"
+    * So, String s = "Hello" is basically referencing to a memory location and not directly storing the value.
 
 * Intro
--> a = 10;
-    -> Here, a is 'reference variable' here
-    -> and 10 is the object.
-    -> a is not the object.
-
 -> So, 'a' is stored in stack, and that a is storing the memory address of a block in 'heap' where the value 10 is stored.
+
+-> When some variable is stored in stack memory, it stores the value.
+-> int a = 10;
+-> int b = a;
+
+-> Here, a variable named 'a' is stored in stack, which is storing a value of '10'.
+-> Now, there is a new variable 'b', which is going to store, whatever is there in the stack memory address of 'a', which is the value 10.
+-> So, comparing if(a == b ) makes sense.
+
+-> Now, for reference variables / Object declarations like complex objects etc.
+-> int[] arr = {5,6,7,8};
+    -> Here, there is a variable created on stack memory. This stack memory address can be referenced via the name 'arr'.
+    -> This 'arr' is only storing the address to some memory location. This new memory location is located in heap, because we are defining an object.
+    -> Objects are saved in heap memory.
+-> int[] b = arr;
+    -> Here, we are saying, we created a new memory location which can be referenced via the variable 'b'
+    -> 'b' stored what 'arr' stores
+    -> 'arr' stores the memory location to array elements located in heap memory.
+    -> So, if we make a change in arr like, arr[3] = 900; Then b[3] would also become the same.
+    -> Because 'arr' and 'b' might be two different variables, but they are referencing to same memory address / location in heap.
+
+-> So, if we do if (arr == b), then we are not comapring the values, we are comparing two memory addresses.
+    -> This logic goes for all the classes.
+    -> By similar logic, it is not advisable to compare String variables too.
+        -> This is why, we have equals() method for String. (String s1 = "hello" and String s2 = "hello", and if we compare if(s1 == s2), we are idiots.)
