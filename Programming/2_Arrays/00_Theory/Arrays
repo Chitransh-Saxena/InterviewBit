@@ -1,0 +1,13 @@
+What is an array and how does it work internally
+
+* Array is collection of similar data types
+* If we define an array of type "Integer", we cannot add a string to it.
+* int[] arr = new int[5];       // RHS is the object and LHS is the reference variable
+* int[] arr = {1,2,3,4};
+
+
+* int arr; // This is declaration of the array. It is null, not pointing to any memory as of now
+* arr = new int[5]; // This is initialization of the array. Object is being created here. NOT contigous allocation. That only happens in C/C++.
+* each item of the array can be accessed via the index. Index is basically numerical position of elements.
+* Empty array of type 'int' will have the value '0' by default.
+* But empty array of non-primitive type like Integer and String will have the value 'null' by default.
