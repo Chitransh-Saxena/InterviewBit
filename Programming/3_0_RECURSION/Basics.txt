@@ -1,0 +1,29 @@
+-> When a function calls itself, it is called recursion
+-> Function can call itself with different parameters.
+
+-> public void print(int num) {
+
+    SOP(num);
+    print(num-1);;
+}
+
+-> Above peice of code will keep on printing numbers in decreasing order.
+-> One problem here, we have not specified when to stop, and this will create stack overflow
+
+-> What happens in the memory level in recursion
+    -> A function resides in the stack memory (RAM)
+    -> When a function does anything or executes any instruction, it is on the top of that stack
+        -> When this instruction ends, control comes back to stack of this function
+        -> When slowly all the instructions are over, work of this stack is done and control goes back to the caller of this function
+    -> So, if we assume a sequence like this
+        -> main() calls -> solve(num1, num2) print -> answer.
+        -> So, in RAM, main is loaded apart from other JVM stuff
+        -> in the main() memory's stack, solve() is called and creates it's own stack.
+        -> It executes the instruction and prints answer.
+        -> Once printed, control goes back to solve()
+        -> Since the task is over control goes back to main() and stack of solve() is available for gargabe collection
+
+
+-> Now, in case of recursion, if we do not exit the recursive call somehow, we are going to make infinite calls and keep on occupying memory on stack
+-> This will lead to stackoverflow and eventually the program will crash
+-> For this reason, it is always important to have a base case to end the recursive calls or come out of it when we have our answer 
