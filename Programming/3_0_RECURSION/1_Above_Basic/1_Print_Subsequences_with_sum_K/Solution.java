@@ -6,6 +6,14 @@ import java.util.List;
 public class Solution {
 
     public static int count = 0;
+
+
+    /*
+        Approach
+            -> Approach is same as print all subsequence.
+            -> Simple change here is, we keep track of sum as well.
+            -> And while backtracking, we backtrack with sum as well
+    */
     
     public static void helper(int[] nums, int index, int target, List<Integer> li, int sum) {
         
