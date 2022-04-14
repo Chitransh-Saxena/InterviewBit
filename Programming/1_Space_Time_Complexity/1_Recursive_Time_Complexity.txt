@@ -1,0 +1,30 @@
+-> What is recursion?
+    -> Any method calling itself is called recursion
+
+-> In a method, there could be multiple recursions, but for now let's assume only single recursion is happening.
+-> So, how do we calculate the Time Complexity?
+    -> Find the number of function calls that are going to happen (how many times the recursive function would be called)
+    -> Find the time complexity of each function call, apart from the next recursive call.
+    -> So, for example there are N function calls and each call takes O(N^2).
+        -> So, the time complexity of the recursive function would be N*O(N^2);
+
+-> What if we have 2 recursion calls. Then how is time complexity going to be calculated.
+    -> Dry running the case.
+    -> We start with only 1 function call.
+        -> This, in turn calls the same function 2 times.
+            -> Now these 2 functions recursively call the function 2 times again (total 4 times)
+                -> ....
+    
+    -> So, if we try to get a mathematical pattern here.
+        -> At level 1, function is called 2^0 times.
+        -> At level 2, function is called 2^1 times.
+        -> At level 3, function is called 2^2 times.
+        ...
+        -> At level n, function is called 2^(n+1) times.
+    
+    -> So, what would be the sum of all those levels?
+        -> 2^0 + 2^1 + 2^2 + ... + 2^(n+1)
+        -> This is sum of GP and it should come somewhere around 2^(n+2)
+        -> This can be rounded off to 2^n as we are talking about Big O notation and not typical mathematics.
+    
+

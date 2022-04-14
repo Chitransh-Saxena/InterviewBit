@@ -31,6 +31,18 @@ public class Solution {
             -> This will be classic example of multiple recursion, but with a slight modification
             -> We definitely need to come up with a base case (either add element to some list or print it)
 
+        
+        -> Time complexity for below code?
+            -> At each level, we are calling the recursive function 2 times.
+                -> So, the recursion tree will grow exponentially
+                -> Therefore, the number of recursion calls will be 2^n
+            -> Time complexity of each function (apart from recursive calls)
+                -> Addition to list takes O(1) time {It can become O(N) if we are copying the list}
+                -> Removal from list takes O(N) time
+                    -> This is because we have to iterate through the array to find the element and remove it.
+
+            -> Therefore, the total time complexity for this method is O(2^n)*O(N)
+
     */
 
     public static void generateSubsets(int index, List<Integer> li, List<Integer> nums) {
